@@ -1,0 +1,12 @@
+{
+  "name": "inj2m-arena-goals",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "serve"
+  },
+  "devDependencies": {
+    "serve": "^6.0.6"
+  }
+}
