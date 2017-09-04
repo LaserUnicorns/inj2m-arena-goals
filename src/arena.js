@@ -1,3 +1,4 @@
+import { getLastTuesday } from './utils/date-utils.js'
 import { padLeft } from './utils/string-utils.js'
 import { required } from './utils/lang-utils.js'
 
@@ -8,7 +9,7 @@ export const SEASON_DURATION = 7 // days
  * @param {Date} date 
  */
 export function getSeasonStart(date = required()) {
-    const result = dateFns.setISODay(date, 2)
+    const result = new Date(getLastTuesday(date))
     result.setUTCHours(16, 0, 0, 0)
 
     return result
