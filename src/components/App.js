@@ -9,7 +9,7 @@ Vue.component('app', {
             <div class="five fields">
                 <div class="field">
                     <label>Per reset</label>
-                    <input type="number" v-model.lazy.number="perResetValue" />
+                    <input type="number" step="50000" v-model.lazy.number="perResetValue" />
                 </div>
                 <div class="field">
                     <label>Total</label>
