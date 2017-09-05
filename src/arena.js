@@ -10,6 +10,11 @@ export const SEASON_DURATION = 7 // days
  */
 export function getSeasonStart(date = required()) {
     const result = new Date(getLastTuesday(date))
+    if (date.getUTCDate() === result.getUTCDate()) {
+        if (date.getUTCHours() < 16) {
+            result.setUTCDate(result.getUTCDate() - 7)
+        }
+    }
     result.setUTCHours(16, 0, 0, 0)
 
     return result
