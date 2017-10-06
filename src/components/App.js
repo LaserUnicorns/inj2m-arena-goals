@@ -31,8 +31,8 @@ Vue.component('app', {
                 <tr v-for="(row, index) in sums" v-bind:class="{ active: row.isCurrent }">
                     <td>{{ index + 1 }}</td>
                     <td>{{ row.sum | number({ useGrouping: true }) }}</td>
-                    <td>{{ row.start | date('M/D/YY HH:mm') }}</td>
-                    <td>{{ row.end | date('M/D/YY HH:mm') }}</td>
+                    <td>{{ row.start | date('ddd D, MMM HH:mm') }}</td>
+                    <td>{{ row.end | date('ddd D, MMM HH:mm') }}</td>
                 </tr>
             </tbody>
         </table>
